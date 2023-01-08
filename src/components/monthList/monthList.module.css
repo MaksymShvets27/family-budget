@@ -1,0 +1,20 @@
+.monthList {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  border: 2px solid rgb(88, 50, 87);
+  border-radius: 5px;
+  background-color: rgb(164, 67, 163);
+}
+.monthListUnit {
+  padding: 5px;
+  width: 28%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px solid rgb(88, 50, 87);
+  background-color: rgb(204, 121, 202);
+}
