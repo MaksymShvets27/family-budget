@@ -7,7 +7,7 @@ import FormCheck from './fopmCheck/formCheck';
 import MonthList from './monthList/monthList';
 import SaveMonthButton from './saveMounth/saveMounth';
 
-let buttonsList = ['Продукти', 'Машинка', 'Сигарети', 'Алкоголь', 'Котяри'];
+let buttonsList = ['Foods', 'Pets', 'Car', 'Cigarettes', 'Alcohol'];
 
 export const App = () => {
   const [currentCush, setCurrentCash] = useState(0);
@@ -40,8 +40,12 @@ export const App = () => {
         setLocalStorage={setLocalStorage}
       />
       <CushList cushesList={buttonsList} />
-      {currentDate === (29 || 30 || 31) && (
+      {currentDate === (28 || 29 || 30 || 31) ? (
         <SaveMonthButton buttonsList={buttonsList} />
+      ) : (
+        <p className={css.monthMessege}>
+          You can save budget at the end of the month
+        </p>
       )}
       <MonthList />
     </div>

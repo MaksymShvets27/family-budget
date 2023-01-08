@@ -9,22 +9,24 @@ const MonthList = () => {
     }
   });
   return (
-    <ul className={css.monthList}>
-      {currentMonth.map((month, index) => {
-        return (
-          <li className={css.monthListUnit}>
-            <h3>Month:{index + 1}</h3>
-            {month.map(category => {
-              return (
-                <span>
-                  {category.name}:<p>{category.cush}</p>
-                </span>
-              );
-            })}
-          </li>
-        );
-      })}
-    </ul>
+    <div className={css.monthContainer}>
+      <ul className={css.monthList}>
+        {currentMonth.map((month, index) => {
+          return (
+            <li className={css.monthListUnit}>
+              <h3>Month:{index + 1}</h3>
+              {month.map(category => {
+                return (
+                  <span>
+                    {category.name}:<p>{category.cush}</p>
+                  </span>
+                );
+              })}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 export default MonthList;
